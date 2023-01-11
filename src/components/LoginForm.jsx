@@ -14,6 +14,7 @@ const LoginForm = () => {
         form.forEach((value, key) => {
             data[key] = value;
         })
+        console.log(data)
         
         const { status, response } = await post(endpoint+url_paths.login, data);
 

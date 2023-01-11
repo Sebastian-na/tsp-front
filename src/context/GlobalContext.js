@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { useLocalStorage } from "../hooks/useLocalStorage";
-import * as dotenv from "dotenv"
-dotenv.config()
+
 const GlobalContext = React.createContext();
 
 const GlobalContextProvider = ( {children}) => {
@@ -26,6 +25,7 @@ const GlobalContextProvider = ( {children}) => {
 
 
     const endpoint = process.env.REACT_APP_ENDPOINT;
+    console.log(endpoint.includes("REACT"))
     const url_paths = {
         login: "/login",
         signup: "/signup",
