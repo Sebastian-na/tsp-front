@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { useLocalStorage } from "../hooks/useLocalStorage";
-
+import * as dotenv from "dotenv"
+dotenv.config()
 const GlobalContext = React.createContext();
 
 const GlobalContextProvider = ( {children}) => {
